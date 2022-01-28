@@ -7,6 +7,14 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { CollegeComponent } from './college/college.component';
 import { SpecializedComponent } from './specialized/specialized.component';
 import { TestComponent } from './test/test.component';
+import { QuestionComponent } from './test/question/question.component';
+import { PhAMaComponent } from './ph-a-ma/ph-a-ma.component';
+import { MedComponent } from './med/med.component';
+import { InfTecComponent } from './inf-tec/inf-tec.component';
+import { SocEcComponent } from './soc-ec/soc-ec.component';
+import { MediaComponent } from './media/media.component';
+import { HumComponent } from './hum/hum.component';
+import { GenComponent } from './gen/gen.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +22,16 @@ import { TestComponent } from './test/test.component';
     IntroductionComponent,
     CollegeComponent,
     SpecializedComponent,
-    TestComponent
+    TestComponent,
+    PhAMaComponent,
+    MedComponent,
+    InfTecComponent,
+    SocEcComponent,
+    MediaComponent,
+    HumComponent,
+    GenComponent,
+    TestComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,22 @@
-<p>Если вы выбрали колледж, то предпологается, что вы уже определились со своей профессией. Их мы рассматривать не будем.
-Сейчас же разберемся в видах классов.</p>
+<div class="container">
+	<h2 id="class">Профильные классы</h2>
+	<p>Если вы выбрали колледж, то предпологается, что вы уже определились со своей профессией. Их мы рассматривать не
+		будем. Сейчас же разберемся в видах классов. </p>
+		<div class="spec-list">
+			<div class="list">
+			<h3>Выберите класс:</h3>
+				<ul>
+					<li><a routerLink="ph-a-ma" class="button" routerLinkActive="active">Физико-математический</a></li>
+					<li><a routerLink="med" class="button" routerLinkActive="active">Медицинский</a></li>
+					<li><a routerLink="inf-tec" class="button" routerLinkActive="active">Информационно-технологический</a></li>
+					<li><a routerLink="soc-ec" class="button" routerLinkActive="active">Социально-экономический</a></li>
+					<li><a routerLink="media" class="button" routerLinkActive="active">Медиа</a></li>
+					<li><a routerLink="hum" class="button" routerLinkActive="active">Гуманитарный</a></li>
+					<li><a routerLink="gen" class="button" routerLinkActive="active">Общеобразовательный</a></li>
+				</ul>
+			</div>
+			<div class="list-item">
+				<router-outlet></router-outlet>
+			</div>
+		</div>
+</div>

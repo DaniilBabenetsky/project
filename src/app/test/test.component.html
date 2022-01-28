@@ -1,1 +1,2 @@
-<p>test works!</p>
+<app-question [number]='question.number' [first_option]='question.first_option' [second_option]='question.second_option'
+	(selectedOption)="changeQuestion($event)"></app-question>

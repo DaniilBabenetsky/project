@@ -1,0 +1,45 @@
+.container {
+	font-size: 20px;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.lists {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+h4 {
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	margin: 10px;
+}
+
+li:before {
+	content: '+';
+	font-weight: 700;
+}
+
+.list {
+	
+	border-radius: 15px;
+	margin: 20px;
+}
+
+.list1{
+ 	background-color: rgb(236, 187, 187);
+}
+
+.list2{
+	background-color: rgb(185, 236, 248);
+}
+h4 {
+	margin-top: 2%;
+}

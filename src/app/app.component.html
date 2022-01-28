@@ -1,14 +1,14 @@
 <div class="container">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom header">
     <a routerLink="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <span class="fs-4">Сайт по профорентации "Куда пойти после 9 класса?"</span>
+      <h1 class="fs-4">Сайт по профорентации "Куда пойти после 9 класса?"</h1>
     </a>
 
     <ul class="nav nav-pills">
-      <li class="nav-item"><a routerLink="" class="nav-link">Главная</a></li>
-      <li class="nav-item"><a routerLink="college" class="nav-link">В колледж или в 10 класс?</a></li>
-      <li class="nav-item"><a routerLink="specialized" class="nav-link">В какой класс пойти?</a></li>
-      <li class="nav-item"><a routerLink="test"class="nav-link">Тест</a></li>
+      <li class="nav-item"><a routerLink="" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Главная</a></li>
+      <li class="nav-item"><a routerLink="college" class="nav-link"  routerLinkActive="active">В колледж или в 10 класс?</a></li>
+      <li class="nav-item"><a routerLink="specialized" class="nav-link"  routerLinkActive="active">В какой класс пойти?</a></li>
+      <li class="nav-item"><a routerLink="test"class="nav-link"  routerLinkActive="active">Тест</a></li>
     </ul>
   </header>
   <main class="container">

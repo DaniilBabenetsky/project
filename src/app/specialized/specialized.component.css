@@ -1,0 +1,79 @@
+.container {
+	font-size: 25px;
+}
+
+li, ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+	margin: 5px;
+	margin-left: 15px;
+	margin-bottom: 13px;
+}
+
+.spec-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.list-item {
+	margin-left: 50px;
+}
+
+.list {
+	border: 2px solid rgb(197, 191, 160);
+	border-radius: 20px;
+	background-color: rgb(245, 240, 174);
+	height: min-content;
+	width: auto;
+	margin-bottom: 20px;
+	margin-right: 0px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+hr {
+	margin: 0;
+}
+
+h3 {
+	text-align: center;
+}
+
+.button {
+	background-color: rgb(65, 63, 63);
+	color: rgb(226, 224, 224);
+	border: solid 1px rgb(49, 48, 48);
+	text-decoration: none;
+	border-radius: 8px;
+	padding: 3px 7px;
+	align-content: center;
+	cursor: pointer;
+	box-shadow: 3px 3px 3px 3px rgb(94, 118, 128);
+}
+
+a:hover {
+	background-color: rgb(51, 49, 49);
+	color: rgb(255, 255, 255);
+}
+
+a:active {
+	background-color: rgb(70, 67, 67);
+	box-shadow: none;
+}
+
+.active {
+	background-color: rgb(113, 209, 145);
+	border: solid 2px rgb(94, 186, 125);
+	color: white;
+	box-shadow: none;
+}
+
+.active:hover {
+	background-color: rgb(85, 163, 111);
+}
