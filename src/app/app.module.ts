@@ -15,7 +15,6 @@ import { SocEcComponent } from './soc-ec/soc-ec.component';
 import { MediaComponent } from './media/media.component';
 import { HumComponent } from './hum/hum.component';
 import { GenComponent } from './gen/gen.component';
-
 @NgModule({
   declarations: [
     AppComponent,

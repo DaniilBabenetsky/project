@@ -20,5 +20,4 @@ export class QuestionComponent implements OnInit {
   selected(type: string) {
     this.selectedOption.emit(type);
   }
-
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IQuestion } from './question.model';
 
 type Answer = { [type: string]: number }
-
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
