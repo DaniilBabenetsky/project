@@ -1,1 +1,1 @@
-export type IType = 'programmer' | 'medic';
+export type IType = 'it' | 'medic' | 'media' | 'soc' | 'hum' | 'ph-mth';
