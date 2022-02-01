@@ -17,10 +17,7 @@ li {
 .spec-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.list-item {
-	margin-left: 50px;
+	gap: 50px;
 }
 
 .list {
