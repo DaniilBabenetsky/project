@@ -209,12 +209,12 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
     this.answers = {
-      medic: { score: 0, text: "asd"},
-      it: { score: 0, text: "asd"},
-      media: { score: 0, text: "asd"},
-      soc: { score: 0, text: "asd"},
-      hum: { score: 0, text: "asd"},
-      phmth: { score: 0, text: "asd"},
+      medic: { score: 0, text: "Вам подходит медецинский класс"},
+      it: { score: 0, text: "Вам подходит IT класс"},
+      media: { score: 0, text: "Вам подходит медиа класс"},
+      soc: { score: 0, text: "Вам подходит социально-экономический класс"},
+      hum: { score: 0, text: "Вам подходит гуманитарный класс"},
+      phmth: { score: 0, text: "Вам подходит физико-математический класс"},
     }
   }
 
