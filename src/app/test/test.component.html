@@ -1,6 +1,11 @@
-<app-question
-[number]='question.number'
-[first_option]='question.first_option'
-[second_option]='question.second_option'
-(selectedOption)="changeQuestion($event)"
-></app-question>
+<div *ngIf="!answer; else showAnswer ">
+  <app-question
+  [number]='question.number'
+  [first_option]='question.first_option'
+  [second_option]='question.second_option'
+  (selectedOption)="changeQuestion($event)"
+  ></app-question>
+</div>
+<ng-template #showAnswer>
+  <app-answer [answer]="answer"></app-answer>
+</ng-template>

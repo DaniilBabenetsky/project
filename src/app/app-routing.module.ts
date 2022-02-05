@@ -11,6 +11,7 @@ import { PhAMaComponent } from './ph-a-ma/ph-a-ma.component';
 import { SocEcComponent } from './soc-ec/soc-ec.component';
 import { SpecializedComponent } from './specialized/specialized.component';
 import { TestComponent } from './test/test.component';
+import { ConnectionComponent } from './connection/connection.component';
 
 const routes: Routes = [
   {
@@ -59,12 +60,16 @@ const routes: Routes = [
     path: 'test',
     component:TestComponent,
   },
-  
+  {
+    path: 'connection',
+    component:ConnectionComponent,
+  },
+
   {
     path: '**',
     redirectTo:'/'
   },
-  
+
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 <div>
   <p>{{number}}. Вы бы предпочли:</p>
   <div *ngIf="first_option && second_option" class="options">
-    <div (click)="selected(first_option.type)" class="option">{{first_option.text}}</div>
-    <div (click)="selected(second_option.type)" class="option">{{second_option.text}}</div>
+    <div (click)="selected(first_option.typeScores)" class="option">{{first_option.text}}</div>
+    <div (click)="selected(second_option.typeScores)" class="option">{{second_option.text}}</div>
   </div>
 </div>

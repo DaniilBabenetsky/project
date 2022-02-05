@@ -1,8 +1,8 @@
-import { IType } from "./type.model";
+import { ITypeScore } from "./type.model";
 
 export interface IOption {
   text: string;
-  type: IType;
+  typeScores: ITypeScore[];
 }
 
 export interface IQuestion {

@@ -15,6 +15,8 @@ import { SocEcComponent } from './soc-ec/soc-ec.component';
 import { MediaComponent } from './media/media.component';
 import { HumComponent } from './hum/hum.component';
 import { GenComponent } from './gen/gen.component';
+import { ConnectionComponent } from './connection/connection.component';
+import { AnswerComponent } from './test/answer/answer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { GenComponent } from './gen/gen.component';
     HumComponent,
     GenComponent,
     TestComponent,
-    QuestionComponent
+    QuestionComponent,
+    ConnectionComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

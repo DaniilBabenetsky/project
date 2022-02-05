@@ -1,3 +1,4 @@
+import { ITypeScore } from './../type.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IOption } from '../question.model';
 
@@ -10,14 +11,14 @@ export class QuestionComponent implements OnInit {
   @Input() number: number | undefined;
   @Input() first_option: IOption | undefined;
   @Input() second_option: IOption | undefined;
-  @Output() selectedOption: EventEmitter<string> = new EventEmitter<string>();
+  @Output() selectedOption: EventEmitter<ITypeScore[]> = new EventEmitter<ITypeScore[]>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  selected(type: string) {
+  selected(type: ITypeScore[]) {
     this.selectedOption.emit(type);
   }
 }

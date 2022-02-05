@@ -1,85 +1,247 @@
+import { IType, ITypeScore } from './type.model';
 import { Component, OnInit } from '@angular/core';
 import { IQuestion } from './question.model';
 
-type Answer = { [type: string]: number }
+type Answer = { [type: string]: {score: number, text: string} }
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    questions: IQuestion[] = [
+  questions: IQuestion[] = [
     {
       number: 1,
-      first_option: { text: 'Точные науки', type: 'it'},
-      second_option: { text: 'Гуманитарные науки', type: 'medic'},
+      first_option: {
+        text: 'Точные науки', typeScores: [
+          {
+            type: 'it',
+            score: 1
+          },
+          {
+            type: 'phmth',
+            score: 1
+          },
+        ]
+      },
+      second_option: {
+        text: 'Гуманитарные науки', typeScores: [
+          {
+            type: 'medic',
+            score: 1
+          },
+          {
+            type:'soc',
+            score:1
+          },
+          {
+            type:'hum',
+            score:1
+          }
+        ]
+      }
+      ,
     },
     {
       number: 2,
-      first_option: { text: 'Обучаться, уча четкие правила', type: 'it'},
-      second_option: { text: 'Обучаться, принимая различные точки зрения', type: 'medic'},
+      first_option: { text: 'Обучаться, уча четкие правила', typeScores:[
+      {
+        type:'it',
+        score:2
+      },
+      {
+        type:'phmth',
+        score:2
+      },
+      {
+        type:'soc',
+        score:2
+      },
+    ]},
+      second_option: { text: 'Обучаться, принимая различные точки зрения', typeScores:[
+        {
+          type:'hum',
+          score:2
+        },
+        {
+          type:'media',
+          score:2
+        }
+      ]},
     },
     {
       number: 3,
-      first_option: { text: 'Я люблю рисовать', type: 'it'},
-      second_option: { text: 'Я люблю чертить', type: 'medic'},
+      first_option: { text: 'Я люблю рисовать', typeScores:[
+        {
+          type:'media',
+          score:3
+        },
+        {
+          type:'hum',
+          score:2
+        }
+      ]},
+      second_option: { text: 'Я люблю чертить', typeScores:[
+        {
+          type:'it',
+          score:1
+        },
+        {
+          type:'phmth',
+          score:1
+        }
+      ]},
     },
     {
       number: 4,
-      first_option: { text: 'Мне нравится получать знания о вещах из реального мира', type: 'medic'},
-      second_option: { text: 'Мне нравится получать знания об абстрактных вещах', type: 'it'},
+      first_option: { text: 'Мне нравится получать знания о вещах из реального мира', typeScores:[
+        {
+          type:'medic',
+          score:3
+        },
+        {
+          type:'soc',
+          score:1
+        },
+        {
+          type:'media',
+          score:3
+        }
+      ]},
+      second_option: { text: 'Мне нравится получать знания об абстрактных вещах', typeScores:[
+        {
+          type:'hum',
+          score:3
+        },
+        {
+          type:'phmth',
+          score:2
+        },
+        {
+          type:'it',
+          score:2
+        }
+      ]},
     },
     {
       number: 5,
-      first_option: { text: 'Мне нравится получать знания, уча термины и законы', type: 'it'},
-      second_option: { text: 'Мне нравится получать знания, понимая механику работы чего-либо', type: 'medic'},
+      first_option: { text: 'Мне нравится получать знания, уча термины и законы', typeScores:[
+        {
+          type:'medic',
+          score:3
+        },
+        {
+          type:'soc',
+          score:3
+        }
+      ]},
+      second_option: { text: 'Мне нравится получать знания, понимая механику работы чего-либо', typeScores:[
+        {
+          type:'it',
+          score:2
+        },
+        {
+          type:'phmth',
+          score:2
+        }
+      ]},
     },
     {
       number: 6,
-      first_option: { text: 'Знать ответ на вопрос, но не уметь доказать свою позицию', type: 'it'},
-      second_option: { text: 'Не знать правельность своего ответа, но уметь доказать всем, что он верен', type: 'medic'},
+      first_option: { text: 'Знать ответ на вопрос, но не уметь доказать свою позицию', typeScores:[
+        {
+          type:'phmth',
+          score:1
+        },
+        {
+          type:'it',
+          score:2
+        }
+      ]},
+      second_option: { text: 'Не знать правельность своего ответа, но уметь доказать всем, что он верен',typeScores:[
+        {
+          type:'medic',
+          score:2
+        },
+        {
+          type:'hum',
+          score:3
+        }
+      ]},
     },
     {
       number: 7,
-      first_option: { text: 'Общаться с людьми', type: 'medic'},
-      second_option: { text: 'Проводить время в одиночестве', type: 'it'},
-    },
+      first_option: { text: 'Общаться с людьми', typeScores:[
+        {
+          type:'medic',
+          score:2
+        },
+        {
+          type:'soc',
+          score:1
+        },
+        {
+          type:'media',
+          score:3
+        }
+      ]},
+      second_option: { text: 'Проводить время в одиночестве', typeScores:[
+        {
+          type:'it',
+          score:2
+        },
+        {
+          type:'phmth',
+          score:1
+        }
+      ]}
+    }
   ];
 
   question: IQuestion;
   question_index: number = 0;
 
   answers: Answer = {};
-
+  answer: string = '';
   constructor() {
     this.question = this.questions[this.question_index];
   }
 
   ngOnInit(): void {
     this.answers = {
-      medic: 0,
-      it: 0
+      medic: { score: 0, text: "asd"},
+      it: { score: 0, text: "asd"},
+      media: { score: 0, text: "asd"},
+      soc: { score: 0, text: "asd"},
+      hum: { score: 0, text: "asd"},
+      phmth: { score: 0, text: "asd"},
     }
   }
 
-  changeQuestion(type: string) {
-    console.log(type);
+  changeQuestion(typeScores: ITypeScore[]) {
+    console.log(this.answers);
 
-    if (type === '') {
-
-    } else if (type === '') {
-      this.answers[''] += 2;
-      this.answers[''] += 1;
-
-    }
-    else {
-      this.answers[type] += 1;
+    for (let typeScore of typeScores) {
+      this.answers[typeScore.type].score += typeScore.score;
     }
 
     this.question_index++;
-    this.question = this.questions[this.question_index];
 
-    console.log(this.answers);
+    if (this.question_index > this.questions.length - 1){
+      this.answer = this.getMaxAnswer(this.answers);
+    } else {
+      this.question = this.questions[this.question_index];
+      console.log(this.answers);
+    }
+  }
+  getMaxAnswer(answers: Answer): string{
+    let max = {type: '', score: 0};
+    Object.keys(answers).forEach((key: string) => {
+      if (answers[key].score > max.score) {
+        max = {type: key, score: answers[key].score};
+      }
+    });
 
+    return answers[max.type].text;
   }
 }
