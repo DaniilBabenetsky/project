@@ -1,0 +1,13 @@
+.container {
+	display: grid;
+	margin: 10px;
+}
+
+.content {
+	grid-template-columns: 1fr;
+	text-align: center;
+	background: rgb(245, 247, 132);
+	padding: 50px;
+	border-radius: 15px;
+	font-size: 20px;
+}

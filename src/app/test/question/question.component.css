@@ -2,12 +2,47 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 10px;
-	}
+}
 
-	.option {
-		border: solid 2px rgb(230, 141, 238);
-		border-radius: 15px;
-		padding: 5px;
-		cursor: pointer;
-		text-align: center;
-	}
+.option {
+	padding: 35px;
+	border-radius: 15px;
+	font-size: 20px;
+	font-weight: 700;
+	box-shadow: 3px 3px 3px 3px rgb(179, 174, 174);
+}
+
+.option_1 {
+	background: rgb(140, 219, 255);
+	text-align: center;
+	cursor: pointer;
+}
+
+.option_2 {
+	background: rgb(148, 255, 144);
+	text-align: center;
+	cursor: pointer;
+}
+
+.option_1:hover {
+	background: rgb(129, 199, 231);
+}
+
+.option_2:hover {
+	background: rgb(130, 228, 126);
+}
+
+.option_1:active {
+	box-shadow: none;
+	background: rgb(151, 222, 255);
+}
+
+.option_2:active {
+	box-shadow: none;
+	background: rgb(159, 255, 156);
+}
+
+p{
+	font-size: 20px;
+	font-weight: 600;
+}
